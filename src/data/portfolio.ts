@@ -241,22 +241,25 @@ export const technologies = [
 
 export const teamMembers = [
   {
-    name: 'Lead Developer',
-    role: 'Full Stack Engineer',
-    expertise: 'Laravel, Vue.js, DevOps',
-    bio: 'Passionate about building scalable enterprise solutions',
+    name: 'Norman Bii',
+    role: 'Lead Developer',
+    expertise: 'Laravel, Vue.js, Golang',
+    bio: 'Full-stack engineer with expertise in building scalable enterprise solutions',
+    email: 'biinorman1@gmail.com',
   },
   {
-    name: 'Backend Specialist',
-    role: 'Senior Laravel Developer',
-    expertise: 'APIs, Databases, Security',
-    bio: 'Expert in designing robust backend architectures',
+    name: 'Patrick',
+    role: 'Senior Developer',
+    expertise: 'Backend Architecture',
+    bio: 'Specialized in designing robust and efficient backend systems',
+    email: '',
   },
   {
-    name: 'Frontend Expert',
-    role: 'Vue.js Specialist',
-    expertise: 'UI/UX, Performance, Interactive Features',
-    bio: 'Creating beautiful and performant user experiences',
+    name: 'Development Team',
+    role: 'Core Engineers',
+    expertise: 'PostgreSQL, MySQL, DevOps',
+    bio: 'Expert team dedicated to delivering excellence',
+    email: '',
   },
 ]
 

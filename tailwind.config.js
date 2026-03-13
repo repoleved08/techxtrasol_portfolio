@@ -7,39 +7,28 @@ export default {
   },
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
+      },
       colors: {
         primary: {
-          50: 'hsl(207 90% 95%)',
-          100: 'hsl(207 90% 90%)',
-          200: 'hsl(207 90% 80%)',
-          300: 'hsl(207 90% 70%)',
-          400: 'hsl(207 90% 60%)',
-          500: 'hsl(207 90% 50%)',
-          600: 'hsl(207 90% 40%)',
-          700: 'hsl(207 90% 30%)',
-          800: 'hsl(207 90% 20%)',
-          900: 'hsl(207 90% 10%)',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c3d66',
         },
-        accent: {
-          50: 'hsl(280 85% 95%)',
-          100: 'hsl(280 85% 90%)',
-          200: 'hsl(280 85% 80%)',
-          300: 'hsl(280 85% 70%)',
-          400: 'hsl(280 85% 60%)',
-          500: 'hsl(280 85% 50%)',
-          600: 'hsl(280 85% 40%)',
-          700: 'hsl(280 85% 30%)',
-          800: 'hsl(280 85% 20%)',
-          900: 'hsl(280 85% 10%)',
-        },
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-in': 'slideIn 0.5s ease-out',
-        'pulse-soft': 'pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -47,12 +36,16 @@ export default {
           '100%': { opacity: '1' },
         },
         slideIn: {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
-        pulseSoft: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
     },
@@ -63,11 +56,11 @@ export default {
         '.animation-delay-300': {
           'animation-delay': '300ms',
         },
-        '.animation-delay-2000': {
-          'animation-delay': '2s',
+        '.animation-delay-600': {
+          'animation-delay': '600ms',
         },
-        '.animation-delay-4000': {
-          'animation-delay': '4s',
+        '.animation-delay-900': {
+          'animation-delay': '900ms',
         },
         '.line-clamp-3': {
           overflow: 'hidden',

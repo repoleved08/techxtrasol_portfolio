@@ -1,10 +1,12 @@
 @import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
+  font-family: 'Outfit', system-ui, sans-serif;
   @apply transition-colors duration-200;
 }
 
@@ -13,7 +15,7 @@ html {
 }
 
 body {
-  @apply bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100;
+  @apply bg-white text-slate-900;
 }
 
 #app {
@@ -26,13 +28,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-900;
+  @apply bg-slate-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-primary-500 to-accent-500 rounded-full;
+  @apply bg-blue-500 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-primary-600 to-accent-600;
+  @apply bg-blue-600;
 }

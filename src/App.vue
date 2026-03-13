@@ -11,7 +11,7 @@ import Footer from './components/common/Footer.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-950">
+  <div class="min-h-screen bg-white">
     <NavigationBar />
     <main>
       <HeroSection />
@@ -26,8 +26,12 @@ import Footer from './components/common/Footer.vue'
   </div>
 </template>
 
-<style scoped>
-main {
-  width: 100%;
+<style>
+* {
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>

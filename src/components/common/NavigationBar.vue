@@ -1,64 +1,45 @@
 <template>
-  <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/50">
+  <nav class="sticky top-0 z-50 bg-white border-b border-slate-200">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
+          <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
             <span class="text-white font-bold text-lg">TX</span>
           </div>
-          <span class="hidden sm:inline text-xl font-bold bg-gradient-to-r from-primary-300 to-accent-300 bg-clip-text text-transparent"
-            >TechXtraSol</span
-          >
+          <span class="hidden sm:inline text-xl font-bold text-slate-900">TechXtraSol</span>
         </div>
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center gap-8">
-          <a
-            href="#services"
-            class="text-slate-300 hover:text-primary-300 transition-colors font-medium"
-          >
+          <a href="#services" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">
             Services
           </a>
-          <a
-            href="#projects"
-            class="text-slate-300 hover:text-primary-300 transition-colors font-medium"
-          >
+          <a href="#projects" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">
             Projects
           </a>
-          <a
-            href="#technologies"
-            class="text-slate-300 hover:text-primary-300 transition-colors font-medium"
-          >
+          <a href="#technologies" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">
             Technologies
           </a>
-          <a
-            href="#blog"
-            class="text-slate-300 hover:text-primary-300 transition-colors font-medium"
-          >
-            Blog
+          <a href="#team" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">
+            Team
           </a>
-          <a
-            href="#contact"
-            class="text-slate-300 hover:text-primary-300 transition-colors font-medium"
-          >
+          <a href="#contact" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">
             Contact
           </a>
         </div>
 
         <!-- CTA Button -->
-        <button
-          class="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/50 transform hover:-translate-y-0.5 text-sm md:text-base"
-        >
+        <button class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 text-sm md:text-base">
           Get Started
         </button>
 
         <!-- Mobile menu button -->
         <button
           @click="isOpen = !isOpen"
-          class="md:hidden p-2 hover:bg-slate-800 rounded-lg transition-colors"
+          class="md:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors"
         >
-          <svg class="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -78,41 +59,21 @@
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-2"
       >
-        <div v-if="isOpen" class="md:hidden border-t border-slate-800/50 bg-slate-900/50 backdrop-blur-lg">
+        <div v-if="isOpen" class="md:hidden border-t border-slate-200 bg-slate-50">
           <div class="flex flex-col gap-4 px-4 py-4">
-            <a
-              href="#services"
-              @click="isOpen = false"
-              class="text-slate-300 hover:text-primary-300 transition-colors font-medium py-2"
-            >
+            <a href="#services" @click="isOpen = false" class="text-slate-600 hover:text-blue-600 transition-colors font-medium py-2">
               Services
             </a>
-            <a
-              href="#projects"
-              @click="isOpen = false"
-              class="text-slate-300 hover:text-primary-300 transition-colors font-medium py-2"
-            >
+            <a href="#projects" @click="isOpen = false" class="text-slate-600 hover:text-blue-600 transition-colors font-medium py-2">
               Projects
             </a>
-            <a
-              href="#technologies"
-              @click="isOpen = false"
-              class="text-slate-300 hover:text-primary-300 transition-colors font-medium py-2"
-            >
+            <a href="#technologies" @click="isOpen = false" class="text-slate-600 hover:text-blue-600 transition-colors font-medium py-2">
               Technologies
             </a>
-            <a
-              href="#blog"
-              @click="isOpen = false"
-              class="text-slate-300 hover:text-primary-300 transition-colors font-medium py-2"
-            >
-              Blog
+            <a href="#team" @click="isOpen = false" class="text-slate-600 hover:text-blue-600 transition-colors font-medium py-2">
+              Team
             </a>
-            <a
-              href="#contact"
-              @click="isOpen = false"
-              class="text-slate-300 hover:text-primary-300 transition-colors font-medium py-2"
-            >
+            <a href="#contact" @click="isOpen = false" class="text-slate-600 hover:text-blue-600 transition-colors font-medium py-2">
               Contact
             </a>
           </div>
