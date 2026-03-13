@@ -335,33 +335,378 @@ export const blogPosts = [
     id: 1,
     title: 'Building Scalable Laravel APIs',
     excerpt: 'Best practices for creating robust and efficient REST APIs with Laravel',
+    slug: 'building-scalable-laravel-apis',
     date: '2024-01-15',
     category: 'Backend',
     readTime: 5,
+    author: 'Norman Bii',
+    content: `
+# Building Scalable Laravel APIs
+
+Creating a robust REST API is crucial for modern web applications. This comprehensive guide covers best practices for building scalable Laravel APIs that can handle millions of requests.
+
+## Why API Architecture Matters
+
+A well-designed API architecture is the foundation of any successful web service. It determines how your application scales, performs, and evolves over time.
+
+## Key Principles
+
+### 1. Resource-Oriented Design
+- Use HTTP methods correctly (GET, POST, PUT, DELETE)
+- Design URLs around resources, not actions
+- Keep your endpoints intuitive and predictable
+
+### 2. Versioning Strategy
+- Plan for API evolution from day one
+- Use URL-based versioning (/api/v1, /api/v2)
+- Maintain backward compatibility
+
+### 3. Rate Limiting
+- Protect your API from abuse
+- Implement per-user rate limits
+- Use middleware for consistent protection
+
+### 4. Pagination
+- Always paginate large datasets
+- Use cursor-based pagination for better performance
+- Include metadata in responses
+
+## Caching Strategies
+
+Caching is essential for scalability:
+
+- **Database Query Caching**: Use Redis for frequently accessed data
+- **HTTP Caching**: Leverage ETags and Last-Modified headers
+- **Client-Side Caching**: Let browsers cache GET requests
+
+## Error Handling
+
+Consistent error responses build trust:
+
+\`\`\`json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "The given data was invalid.",
+    "details": {
+      "email": ["The email must be a valid email address"]
+    }
+  }
+}
+\`\`\`
+
+## Testing Your API
+
+Always test thoroughly:
+
+- Unit tests for business logic
+- Integration tests for API endpoints
+- Load tests to validate scalability
+
+## Conclusion
+
+Building scalable APIs requires careful planning and attention to best practices. Start simple, measure performance, and optimize based on real usage patterns.
+    `,
+    tags: ['Laravel', 'API', 'Backend', 'REST'],
   },
   {
     id: 2,
     title: 'Vue.js Performance Optimization',
     excerpt: 'Advanced techniques to optimize your Vue.js applications for production',
+    slug: 'vuejs-performance-optimization',
     date: '2024-01-10',
     category: 'Frontend',
     readTime: 7,
+    author: 'Norman Bii',
+    content: `
+# Vue.js Performance Optimization
+
+Performance is a critical aspect of user experience. This guide explores advanced techniques to make your Vue.js applications lightning-fast.
+
+## Measuring Performance
+
+Before optimizing, measure your baseline:
+
+- Use Vue DevTools Profiler
+- Check Core Web Vitals with Lighthouse
+- Monitor real user metrics with Google Analytics
+
+## Code Splitting
+
+Reduce initial bundle size:
+
+- Route-based code splitting with dynamic imports
+- Component-level lazy loading
+- Separate vendor bundles
+
+## Component Optimization
+
+### 1. Use v-show vs v-if Wisely
+- v-show: Better for frequently toggled elements
+- v-if: Better when condition rarely changes
+
+### 2. Memoization
+- Use \`computed\` for expensive calculations
+- Leverage \`@memo\` for component optimization
+
+### 3. Lazy Components
+\`\`\`javascript
+const HeavyComponent = defineAsyncComponent(() =>
+  import('./HeavyComponent.vue')
+)
+\`\`\`
+
+## Template Optimization
+
+- Avoid complex expressions in templates
+- Use computed properties instead
+- Minimize watchers usage
+
+## Bundle Size Reduction
+
+### Analysis Tools
+- Webpack Bundle Analyzer
+- Vite Rollup Visualizer
+- Source Map Explorer
+
+### Optimization Techniques
+- Tree-shaking unused code
+- Minification and compression
+- Image optimization
+
+## Virtual Scrolling
+
+For large lists:
+
+\`\`\`javascript
+import { VirtualScroller } from 'vue-virtual-scroller'
+\`\`\`
+
+## Monitoring in Production
+
+- Set up error tracking (Sentry)
+- Monitor performance metrics
+- Use APM solutions
+
+## Conclusion
+
+Vue.js applications can be incredibly performant with the right optimization strategies. Focus on measuring, identifying bottlenecks, and applying targeted optimizations.
+    `,
+    tags: ['Vue.js', 'Performance', 'Frontend', 'Optimization'],
   },
   {
     id: 3,
     title: 'Zero-Downtime Deployments',
     excerpt: 'Implementing CI/CD pipelines with GitHub Actions for seamless updates',
+    slug: 'zero-downtime-deployments',
     date: '2024-01-05',
     category: 'DevOps',
     readTime: 6,
+    author: 'Norman Bii',
+    content: `
+# Zero-Downtime Deployments with GitHub Actions
+
+Deploying code without any service interruption is the gold standard in modern DevOps. This guide shows you how to achieve zero-downtime deployments.
+
+## The Challenge
+
+Traditional deployments involve:
+- Stopping the application
+- Deploying new code
+- Starting the application
+
+This creates downtime that impacts users.
+
+## Blue-Green Deployment
+
+The blue-green strategy maintains two identical production environments:
+
+1. **Blue Environment**: Currently serving traffic
+2. **Green Environment**: New version of the application
+
+### Process
+1. Deploy to green environment
+2. Run full test suite on green
+3. Switch router to green
+4. Keep blue as fallback
+
+## Rolling Deployments
+
+Gradually replace old instances:
+
+\`\`\`yaml
+strategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxSurge: 1
+    maxUnavailable: 0
+\`\`\`
+
+## Database Migrations
+
+Handle schema changes safely:
+
+- Run migrations before deploying code
+- Use feature flags for gradual rollouts
+- Maintain backward compatibility
+
+## GitHub Actions Workflow
+
+\`\`\`yaml
+name: Deploy
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: Deploy to production
+        run: ./deploy.sh
+\`\`\`
+
+## Health Checks
+
+Automated verification:
+
+- Endpoint monitoring
+- Synthetic transactions
+- Error rate tracking
+
+## Rollback Strategy
+
+Always have a quick rollback plan:
+
+- Keep previous version tags
+- Automated rollback on errors
+- Team communication protocol
+
+## Monitoring and Alerts
+
+- Set up performance alerts
+- Monitor error rates
+- Track deployment success metrics
+
+## Conclusion
+
+Zero-downtime deployments are achievable with proper planning and tooling. Start with blue-green deployments, then evolve to more sophisticated strategies as needed.
+    `,
+    tags: ['DevOps', 'CI/CD', 'GitHub Actions', 'Deployment'],
   },
   {
     id: 4,
     title: 'Security Best Practices with Vault',
     excerpt: 'Protecting sensitive data using HashiCorp Vault in Laravel applications',
+    slug: 'security-best-practices-vault',
     date: '2023-12-28',
     category: 'Security',
     readTime: 8,
+    author: 'Norman Bii',
+    content: `
+# Security Best Practices with HashiCorp Vault
+
+Protecting sensitive data is paramount in any application. HashiCorp Vault provides a centralized solution for secrets management.
+
+## Why Vault?
+
+Challenges with traditional secrets management:
+- Secrets scattered across config files
+- Difficult to rotate credentials
+- Hard to audit access
+- No encryption at rest
+
+Vault solves these problems.
+
+## Core Concepts
+
+### Secrets Engines
+- Database credentials
+- API keys
+- SSH keys
+- Certificates
+
+### Authentication Methods
+- Token-based
+- AppRole for applications
+- JWT/OIDC for users
+
+### Policies
+- Fine-grained access control
+- Role-based access (RBAC)
+- Path-based restrictions
+
+## Integration with Laravel
+
+### Setup
+1. Install HashiCorp Vault
+2. Configure authentication
+3. Store secrets in Vault
+4. Access via Laravel application
+
+### Example Configuration
+\`\`\`php
+$vault = new VaultAPI();
+$secret = $vault->get('secret/data/app');
+$databasePassword = $secret['data']['password'];
+\`\`\`
+
+## Best Practices
+
+### 1. Principle of Least Privilege
+- Grant minimum necessary permissions
+- Use time-limited tokens
+- Rotate credentials regularly
+
+### 2. Encryption
+- Encrypt data in transit (TLS)
+- Encrypt data at rest
+- Use strong encryption algorithms
+
+### 3. Audit Logging
+- Enable audit logs
+- Monitor access patterns
+- Alert on suspicious activity
+
+### 4. Secret Rotation
+- Automate credential rotation
+- Use dynamic secrets when possible
+- Test rotation procedures
+
+## Secrets to Protect
+
+- Database passwords
+- API keys
+- OAuth tokens
+- SSH keys
+- Private certificates
+- Encryption keys
+
+## Disaster Recovery
+
+- Backup Vault configuration
+- Test recovery procedures
+- Document recovery steps
+- Maintain off-site backups
+
+## Compliance
+
+Vault helps meet requirements:
+- HIPAA
+- PCI DSS
+- SOC 2
+- GDPR
+
+## Conclusion
+
+HashiCorp Vault is a powerful tool for managing secrets securely. Implementing it properly significantly improves your application's security posture.
+    `,
+    tags: ['Security', 'Vault', 'Laravel', 'Best Practices'],
   },
 ]
 

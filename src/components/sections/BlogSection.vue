@@ -16,9 +16,10 @@
 
       <!-- Blog posts grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        <article
+        <RouterLink
           v-for="post in blogPosts"
           :key="post.id"
+          :to="`/blog/${post.slug}`"
           class="group relative bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col"
         >
           <!-- Date indicator -->
@@ -50,27 +51,28 @@
             <!-- Footer -->
             <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
               <span class="text-xs text-slate-600">{{ post.readTime }} min read</span>
-              <button class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-semibold transition-colors group/link">
+              <div class="inline-flex items-center gap-1 text-blue-600 group-hover:text-blue-700 font-semibold transition-colors group/link">
                 Read
                 <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-              </button>
+              </div>
             </div>
           </div>
-        </article>
+        </RouterLink>
       </div>
 
       <!-- View all button -->
       <div class="text-center">
-        <button class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300">
+        <RouterLink to="/blog" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300">
           View All Articles
-        </button>
+        </RouterLink>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import { blogPosts } from '../../data/portfolio'
 </script>
