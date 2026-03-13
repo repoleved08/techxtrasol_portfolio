@@ -4,6 +4,9 @@ export const companyData = {
   description:
     'We specialize in building robust, scalable solutions using modern technology stack including Laravel, Vue.js, and advanced DevOps practices.',
   cta: 'Start Your Project',
+  email: 'techxtrasol.design@gmail.com',
+  location: 'Nairobi / Kilifi',
+  calendarLink: 'https://cal.com/norman-bii-08/30min',
 }
 
 export const services = [
@@ -304,16 +307,16 @@ export const teamMembers = [
   },
   {
     name: 'Patrick',
-    role: 'Senior Developer',
-    expertise: 'Backend Architecture',
-    bio: 'Specialized in designing robust and efficient backend systems',
+    role: 'Operations Manager',
+    expertise: 'Backend Architecture, Project Management',
+    bio: 'Specialized in designing robust systems and managing operations',
     email: '',
   },
   {
-    name: 'Development Team',
-    role: 'Core Engineers',
-    expertise: 'PostgreSQL, MySQL, DevOps',
-    bio: 'Expert team dedicated to delivering excellence',
+    name: 'Felicia',
+    role: 'Marketing Lead',
+    expertise: 'Brand Strategy, Client Relations',
+    bio: 'Drives growth and builds strong client partnerships',
     email: '',
   },
 ]

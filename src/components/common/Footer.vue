@@ -53,18 +53,18 @@
           <h4 class="font-bold text-slate-900">Contact</h4>
           <ul class="space-y-3">
             <li>
-              <a href="mailto:hello@techxtrasol.com" class="text-slate-600 hover:text-blue-600 text-sm transition-colors">
-                hello@techxtrasol.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+1234567890" class="text-slate-600 hover:text-blue-600 text-sm transition-colors">
-                +1 (234) 567-890
+              <a :href="`mailto:${companyData.email}`" class="text-slate-600 hover:text-blue-600 text-sm transition-colors">
+                {{ companyData.email }}
               </a>
             </li>
             <li class="text-slate-600 text-sm">
-              123 Tech Street<br />
-              Silicon Valley, CA 94000
+              {{ companyData.location }}<br />
+              Kenya
+            </li>
+            <li>
+              <a :href="companyData.calendarLink" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors">
+                Schedule a Call
+              </a>
             </li>
           </ul>
         </div>
@@ -99,12 +99,15 @@
 </template>
 
 <script setup lang="ts">
+import { companyData } from '../../data/portfolio'
+
 const services = [
   'POS Systems',
   'Hotel Management',
   'Financial Systems',
   'Blog Platforms',
   'Company Profiles',
+  'Payment Integration',
   'DevOps & CI/CD',
 ]
 

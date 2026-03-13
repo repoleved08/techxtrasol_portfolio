@@ -26,11 +26,28 @@
             <div class="space-y-2">
               <h3 class="font-bold text-slate-900">{{ contact.title }}</h3>
               <p class="text-slate-600 text-sm">{{ contact.description }}</p>
-              <a :href="contact.link" class="inline-block text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors">
+              <a v-if="contact.link" :href="contact.link" target="_blank" rel="noopener noreferrer" class="inline-block text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors">
                 {{ contact.linkText }}
               </a>
+              <p v-else class="text-slate-600 font-semibold text-sm">{{ contact.linkText }}</p>
             </div>
           </div>
+        </div>
+
+        <!-- Schedule Call CTA -->
+        <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 md:p-12 text-center mb-12 space-y-6">
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Schedule a Meeting</h3>
+          <p class="text-slate-600 max-w-2xl mx-auto">
+            Let's discuss your project requirements. Schedule a 30-minute call with our team to get started.
+          </p>
+          <a
+            :href="companyData.calendarLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300"
+          >
+            Book a Call
+          </a>
         </div>
 
         <!-- Contact form -->
@@ -89,6 +106,7 @@
                 <option value="financial">Financial Systems</option>
                 <option value="blog">Blog Platform</option>
                 <option value="company">Company Profile</option>
+                <option value="payment">Payment Integration</option>
                 <option value="devops">DevOps & Deployment</option>
                 <option value="other">Other</option>
               </select>
@@ -123,28 +141,29 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { companyData } from '../../data/portfolio'
 
 const contactMethods = [
   {
     icon: '📧',
     title: 'Email',
     description: 'Send us an email and we will respond within 24 hours',
-    link: 'mailto:hello@techxtrasol.com',
-    linkText: 'hello@techxtrasol.com',
+    link: `mailto:${companyData.email}`,
+    linkText: companyData.email,
   },
   {
-    icon: '📱',
-    title: 'Phone',
-    description: 'Call us for immediate assistance',
-    link: 'tel:+1234567890',
-    linkText: '+1 (234) 567-890',
+    icon: '📍',
+    title: 'Location',
+    description: 'We are based in Kenya',
+    link: null,
+    linkText: companyData.location,
   },
   {
-    icon: '🌐',
-    title: 'Address',
-    description: 'Visit our office location',
-    link: '#',
-    linkText: 'Contact for Details',
+    icon: '🎯',
+    title: 'Schedule',
+    description: 'Book a meeting with us',
+    link: companyData.calendarLink,
+    linkText: 'Schedule Now',
   },
 ]
 
