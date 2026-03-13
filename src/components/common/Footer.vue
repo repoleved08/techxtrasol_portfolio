@@ -20,6 +20,8 @@
               v-for="social in socialLinks"
               :key="social.name"
               :href="social.link"
+              :target="social.link !== '#' ? '_blank' : ''"
+              :rel="social.link !== '#' ? 'noopener noreferrer' : ''"
               class="w-10 h-10 bg-slate-100 hover:bg-blue-100 border border-slate-200 rounded-lg flex items-center justify-center text-slate-600 hover:text-blue-600 transition-all duration-300"
               :title="social.name"
             >
@@ -127,9 +129,9 @@ const socialIconSvgs: Record<string, string> = {
 }
 
 const socialLinks = [
-  { name: 'GitHub', link: '#' },
-  { name: 'LinkedIn', link: '#' },
-  { name: 'Twitter', link: '#' },
+  { name: 'GitHub', link: companyData.social.github },
+  { name: 'LinkedIn', link: companyData.social.linkedin || '#' },
+  { name: 'Twitter', link: companyData.social.twitter || '#' },
 ]
 
 const getSocialIcon = (name: string): string => {

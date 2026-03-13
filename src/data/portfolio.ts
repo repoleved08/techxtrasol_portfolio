@@ -7,6 +7,11 @@ export const companyData = {
   email: 'techxtrasol.design@gmail.com',
   location: 'Nairobi / Kilifi',
   calendarLink: 'https://cal.com/norman-bii-08/30min',
+  social: {
+    github: 'https://github.com/techxtrasol',
+    linkedin: '',
+    twitter: '',
+  },
 }
 
 export const services = [
