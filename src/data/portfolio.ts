@@ -1,5 +1,5 @@
 export const companyData = {
-  name: 'TechXtraSol',
+  name: 'TechXtraSol Limited',
   tagline: 'Enterprise Solutions Built with Excellence',
   description:
     'We specialize in building robust, scalable solutions using modern technology stack including Laravel, Vue.js, and advanced DevOps practices.',
