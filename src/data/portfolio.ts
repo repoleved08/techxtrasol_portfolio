@@ -13,7 +13,7 @@ export const services = [
     shortDesc: 'Modern point-of-sale solutions',
     description:
       'Enterprise-grade POS systems with real-time inventory management, multi-outlet support, and analytics dashboards.',
-    icon: '💳',
+    icon: 'CreditCardIcon',
     technologies: ['Laravel', 'Vue.js', 'MySQL', 'Redis'],
     features: [
       'Real-time inventory tracking',
@@ -29,7 +29,7 @@ export const services = [
     shortDesc: 'Comprehensive hospitality solutions',
     description:
       'Complete hotel management platform including reservations, billing, housekeeping, and guest management.',
-    icon: '🏨',
+    icon: 'BuildingLibraryIcon',
     technologies: ['Laravel API', 'Vue.js', 'PostgreSQL', 'Spatie Roles'],
     features: [
       'Reservation management',
@@ -45,7 +45,7 @@ export const services = [
     shortDesc: 'Secure financial management platform',
     description:
       'Robust financial management system with compliance, security, and advanced reporting capabilities.',
-    icon: '💰',
+    icon: 'BanknotesIcon',
     technologies: ['Laravel API', 'Vue.js', 'HashiCorp Vault', 'PostgreSQL', 'Spatie Roles'],
     features: [
       'Secure vault integration',
@@ -60,7 +60,7 @@ export const services = [
     title: 'Blog Platforms',
     shortDesc: 'Content management systems',
     description: 'Full-featured blog platforms with SEO optimization, content scheduling, and analytics.',
-    icon: '📝',
+    icon: 'DocumentTextIcon',
     technologies: ['Laravel', 'Vue.js', 'Markdown', 'MySQL'],
     features: [
       'Content scheduling',
@@ -76,7 +76,7 @@ export const services = [
     shortDesc: 'Professional web presence',
     description:
       'Beautiful, responsive company profile websites with CMS integration and performance optimization.',
-    icon: '🌐',
+    icon: 'GlobeAltIcon',
     technologies: ['Vue.js', 'Tailwind CSS', 'Responsive Design'],
     features: [
       'Responsive design',
@@ -92,7 +92,7 @@ export const services = [
     shortDesc: 'Multi-gateway payment solutions',
     description:
       'Complete payment processing solutions supporting Stripe, Polar, M-Pesa, PayPal, and cryptocurrency payments.',
-    icon: '💳',
+    icon: 'ShoppingCartIcon',
     technologies: ['Stripe API', 'PayPal SDK', 'M-Pesa', 'Crypto', 'Laravel'],
     features: [
       'Stripe & Polar integration',
@@ -109,7 +109,7 @@ export const services = [
     shortDesc: 'CI/CD pipelines and VPS management',
     description:
       'Complete deployment solutions with CI/CD pipelines, monitoring, and automated scaling on VPS infrastructure.',
-    icon: '🚀',
+    icon: 'RocketLaunchIcon',
     technologies: ['CI/CD', 'Docker', 'VPS', 'Linux', 'GitHub Actions'],
     features: [
       'Automated deployments',
@@ -128,7 +128,7 @@ export const projects = [
     category: 'POS System',
     description:
       'Comprehensive point-of-sale system for nationwide retail chain with 50+ outlets, real-time inventory sync, and advanced analytics.',
-    image: '📊',
+    image: 'ChartBarIcon',
     technologies: ['Laravel', 'Vue.js', 'MySQL', 'Redis', 'Docker'],
     results: ['50+ outlets connected', '99.9% uptime', 'Real-time sync'],
   },
@@ -138,7 +138,7 @@ export const projects = [
     category: 'Hotel Management',
     description:
       '5-star hotel management system handling 500+ rooms, reservations, billing, and guest services across multiple properties.',
-    image: '🏰',
+    image: 'BuildingIcon',
     technologies: ['Laravel API', 'Vue.js', 'PostgreSQL', 'Docker', 'CI/CD'],
     results: ['500+ room capacity', '95% booking automation', 'Mobile check-in'],
   },
@@ -148,7 +148,7 @@ export const projects = [
     category: 'Financial System',
     description:
       'Secure financial management platform with vault integration, compliance tracking, and comprehensive audit trails.',
-    image: '💎',
+    image: 'CreditCardIcon',
     technologies: ['Laravel', 'Vue.js', 'HashiCorp Vault', 'PostgreSQL', 'Spatie Roles'],
     results: ['Military-grade security', 'Full compliance', '1M+ transactions'],
   },
@@ -158,7 +158,7 @@ export const projects = [
     category: 'Blog Platform',
     description:
       'High-performance blog platform with 10K+ articles, advanced search, and community features.',
-    image: '📚',
+    image: 'BookOpenIcon',
     technologies: ['Laravel', 'Vue.js', 'Elasticsearch', 'MySQL'],
     results: ['10K+ articles', '100K+ monthly visitors', 'Sub-100ms load time'],
   },
@@ -167,7 +167,7 @@ export const projects = [
     title: 'Corporate Web Presence',
     category: 'Company Profile',
     description: 'Modern, responsive company portfolio showcasing services, team, and case studies with CMS.',
-    image: '🎨',
+    image: 'SparklesIcon',
     technologies: ['Vue.js', 'Tailwind CSS', 'Vite', 'Responsive Design'],
     results: ['Mobile-first design', 'Core Web Vitals Perfect', 'SEO A+ rating'],
   },
@@ -177,7 +177,7 @@ export const projects = [
     category: 'Payment Integration',
     description:
       'Integrated payment processing platform supporting Stripe, Polar, M-Pesa, PayPal, and cryptocurrency with real-time reconciliation.',
-    image: '💳',
+    image: 'ShoppingCartIcon',
     technologies: ['Stripe API', 'PayPal SDK', 'M-Pesa', 'Crypto', 'Laravel', 'Vue.js'],
     results: ['5 payment gateways', '99.99% uptime', 'Sub-second processing'],
   },
@@ -187,7 +187,7 @@ export const projects = [
     category: 'DevOps',
     description:
       'Complete deployment pipeline with automated testing, building, and zero-downtime updates on VPS.',
-    image: '⚙️',
+    image: 'CogIcon',
     technologies: ['GitHub Actions', 'Docker', 'Nginx', 'Linux', 'Monitoring'],
     results: ['1-click deployments', '< 5min update time', '99.95% uptime'],
   },
@@ -197,98 +197,98 @@ export const technologies = [
   {
     name: 'Laravel',
     category: 'Backend',
-    logo: '🔧',
+    logo: 'CogIcon',
     description: 'Enterprise PHP framework for building scalable APIs and applications',
     proficiency: 'Expert',
   },
   {
     name: 'Vue.js',
     category: 'Frontend',
-    logo: '⚡',
+    logo: 'SparkIcon',
     description: 'Progressive JavaScript framework for building interactive UIs',
     proficiency: 'Expert',
   },
   {
     name: 'PostgreSQL',
     category: 'Database',
-    logo: '🗄️',
+    logo: 'CircleStackIcon',
     description: 'Advanced open-source relational database',
     proficiency: 'Advanced',
   },
   {
     name: 'MySQL',
     category: 'Database',
-    logo: '🗄️',
+    logo: 'CircleStackIcon',
     description: 'Popular relational database management system',
     proficiency: 'Advanced',
   },
   {
     name: 'Redis',
     category: 'Cache',
-    logo: '⚡',
+    logo: 'BoltIcon',
     description: 'High-performance in-memory data store',
     proficiency: 'Advanced',
   },
   {
     name: 'HashiCorp Vault',
     category: 'Security',
-    logo: '🔐',
+    logo: 'LockClosedIcon',
     description: 'Secrets management and identity protection',
     proficiency: 'Expert',
   },
   {
     name: 'Docker',
     category: 'DevOps',
-    logo: '📦',
+    logo: 'BoxIcon',
     description: 'Containerization platform for reliable deployments',
     proficiency: 'Advanced',
   },
   {
     name: 'CI/CD',
     category: 'DevOps',
-    logo: '🚀',
+    logo: 'RocketLaunchIcon',
     description: 'GitHub Actions, automated testing and deployment pipelines',
     proficiency: 'Expert',
   },
   {
     name: 'Tailwind CSS',
     category: 'Frontend',
-    logo: '🎨',
+    logo: 'PaintBrushIcon',
     description: 'Utility-first CSS framework for rapid UI development',
     proficiency: 'Expert',
   },
   {
     name: 'Spatie Roles',
     category: 'Authorization',
-    logo: '👥',
+    logo: 'UserGroupIcon',
     description: 'Laravel role and permission package',
     proficiency: 'Expert',
   },
   {
     name: 'Stripe',
     category: 'Payment Gateway',
-    logo: '💳',
+    logo: 'CreditCardIcon',
     description: 'Payment processing for global transactions',
     proficiency: 'Expert',
   },
   {
     name: 'PayPal',
     category: 'Payment Gateway',
-    logo: '💳',
+    logo: 'CreditCardIcon',
     description: 'Global payment and checkout solutions',
     proficiency: 'Advanced',
   },
   {
     name: 'M-Pesa',
     category: 'Payment Gateway',
-    logo: '📱',
+    logo: 'DevicePhoneMobileIcon',
     description: 'Mobile money integration for African markets',
     proficiency: 'Advanced',
   },
   {
     name: 'Cryptocurrency',
     category: 'Payment Gateway',
-    logo: '₿',
+    logo: 'CurrencyDollarIcon',
     description: 'Bitcoin, Ethereum, and blockchain payments',
     proficiency: 'Advanced',
   },
