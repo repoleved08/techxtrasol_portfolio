@@ -54,6 +54,11 @@
 
         <!-- Contact form -->
         <div class="bg-white border border-slate-200 rounded-2xl p-8 md:p-12">
+          <!-- Status messages -->
+          <div v-if="submitMessage" class="mb-6 p-4 rounded-lg" :class="submitStatus === 'success' ? 'bg-green-50 border border-green-200 text-green-700' : 'bg-red-50 border border-red-200 text-red-700'">
+            {{ submitMessage }}
+          </div>
+
           <form @submit.prevent="handleSubmit" class="space-y-6">
             <!-- Name -->
             <div class="space-y-2">
@@ -130,9 +135,10 @@
             <!-- Submit button -->
             <button
               type="submit"
-              class="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300"
+              :disabled="isSubmitting"
+              class="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white font-semibold rounded-lg transition-colors duration-300"
             >
-              Send Message
+              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
             </button>
           </form>
         </div>
@@ -187,15 +193,61 @@ const form = ref({
   message: '',
 })
 
+const isSubmitting = ref(false)
+const submitStatus = ref<'idle' | 'loading' | 'success' | 'error'>('idle')
+const submitMessage = ref('')
+
 const handleSubmit = async () => {
-  console.log('Form submitted:', form.value)
-  form.value = {
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    message: '',
+  isSubmitting.value = true
+  submitStatus.value = 'loading'
+  submitMessage.value = ''
+
+  try {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: form.value.name,
+        email: form.value.email,
+        message: `Company: ${form.value.company || 'Not provided'}\nService Interest: ${form.value.service}\n\n${form.value.message}`,
+        subject: `New inquiry about ${form.value.service || 'Services'}`,
+      }),
+    })
+
+    if (!response.ok) {
+      const error = await response.json()
+      throw new Error(error.error || 'Failed to send email')
+    }
+
+    const result = await response.json()
+    
+    if (result.success) {
+      submitStatus.value = 'success'
+      submitMessage.value = 'Thank you! We received your message and will get back to you soon.'
+      form.value = {
+        name: '',
+        email: '',
+        company: '',
+        service: '',
+        message: '',
+      }
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        submitStatus.value = 'idle'
+        submitMessage.value = ''
+      }, 5000)
+    } else {
+      throw new Error('Unexpected response from server')
+    }
+  } catch (error) {
+    submitStatus.value = 'error'
+    submitMessage.value = error instanceof Error ? error.message : 'Failed to send message. Please try again.'
+    console.error('Form submission error:', error)
+  } finally {
+    isSubmitting.value = false
   }
-  alert('Thank you for your message! We will be in touch soon.')
 }
 </script>
