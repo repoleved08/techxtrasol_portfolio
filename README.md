@@ -1,10 +1,10 @@
 # TechXtraSol - Enterprise Solutions Portfolio
 
-A comprehensive, professional portfolio website for TechXtraSol, showcasing enterprise-grade solutions built with modern technology stack.
+A professional, clean light-themed portfolio website for TechXtraSol, showcasing enterprise-grade solutions with elegant design and smooth animations.
 
 ## Overview
 
-This is a stunning portfolio website built with Vue 3, Tailwind CSS, and Vite. It showcases TechXtraSol's expertise in:
+This is a modern portfolio website built with Vue 3, Tailwind CSS, and Vite, featuring a clean light theme with the Outfit font family. It showcases TechXtraSol's expertise in:
 
 - **POS Systems** - Modern point-of-sale solutions with real-time inventory
 - **Hotel Management Systems** - Complete hospitality solutions
@@ -13,6 +13,39 @@ This is a stunning portfolio website built with Vue 3, Tailwind CSS, and Vite. I
 - **Company Profile Pages** - Professional web presence
 - **DevOps & Deployment** - CI/CD pipelines and VPS management
 
+## Key Features
+
+### Design
+✨ **Light Theme** - Clean, professional light color scheme  
+🎨 **Outfit Font** - Modern, elegant typography throughout  
+🚫 **No Gradients** - Solid colors for professional appearance  
+✨ **Smooth Animations** - Subtle, elegant transitions  
+📱 **Fully Responsive** - Perfect on all devices  
+
+### Sections
+🧭 **Navigation** - Sticky navbar with mobile dropdown  
+⭐ **Hero Section** - Compelling headline with CTAs  
+🎯 **Services** - 6 services with tech stacks  
+📁 **Portfolio** - Filterable projects with case studies  
+🛠️ **Technologies** - Tech stack with proficiency levels  
+👥 **Team** - Meet Norman Bii (Lead Dev) and team  
+📚 **Blog** - Latest articles and insights  
+📧 **Contact Form** - Professional inquiry form  
+🎨 **Footer** - Complete footer with links  
+
+## Team
+
+### Norman Bii
+**Lead Developer**
+- Email: biinorman1@gmail.com
+- Expertise: Laravel, Vue.js, Golang
+- Role: Full-stack engineer with expertise in scalable enterprise solutions
+
+### Patrick
+**Senior Developer**
+- Expertise: Backend Architecture
+- Role: Specialized in designing robust backend systems
+
 ## Tech Stack
 
 ### Frontend
@@ -20,26 +53,23 @@ This is a stunning portfolio website built with Vue 3, Tailwind CSS, and Vite. I
 - **TypeScript** - Type-safe development
 - **Tailwind CSS v3** - Utility-first CSS framework
 - **Vite** - Next-gen frontend build tool
+- **Outfit Font** - Modern typography
 
-### Technologies Showcased
-- **Backend**: Laravel API, PostgreSQL, MySQL
-- **Cache**: Redis
-- **Security**: HashiCorp Vault, Spatie Roles
-- **DevOps**: Docker, CI/CD Pipelines, GitHub Actions
-- **Deployment**: VPS Server Management
+### Backend & Infrastructure
+- **Laravel** - Enterprise PHP framework
+- **Vue.js** - Frontend development
+- **Golang** - High-performance services
+- **PostgreSQL/MySQL** - Database systems
+- **HashiCorp Vault** - Secrets management
+- **Docker** - Containerization
+- **CI/CD** - GitHub Actions, automated deployments
 
-## Features
+## Color Scheme
 
-✨ **Hero Section** - Animated hero with company branding and CTAs  
-🧭 **Navigation** - Sticky navigation bar with mobile responsiveness  
-🎯 **Services Showcase** - Detailed service cards with tech stacks  
-📁 **Portfolio** - Filterable project showcase with case studies  
-🛠️ **Tech Stack** - Technology showcase with proficiency indicators  
-👥 **About Section** - Company profile with core values and team  
-📚 **Blog** - Latest articles and insights  
-📧 **Contact Form** - Professional inquiry form  
-🎨 **Modern Design** - Gradient backgrounds, animations, and smooth transitions  
-📱 **Fully Responsive** - Works perfectly on all devices  
+- **Primary Blue**: #0ea5e9 (Clean, professional)
+- **Background**: White (#ffffff)
+- **Text**: Slate gray (#1e293b)
+- **Accents**: Light slate (#f1f5f9)
 
 ## Installation
 
@@ -75,41 +105,70 @@ src/
 │   │   └── ContactSection.vue
 │   └── ...
 ├── data/
-│   └── portfolio.ts (Company data, services, projects, etc.)
+│   └── portfolio.ts (All content data)
 ├── assets/
-│   └── main.css (Tailwind CSS setup)
-└── App.vue (Main app component)
+│   └── main.css (Tailwind setup)
+└── App.vue (Main component)
 ```
 
 ## Customization
 
 ### Update Company Data
-Edit `src/data/portfolio.ts` to:
-- Update company information
-- Add/modify services
-- Update portfolio projects
-- Add technologies
-- Update team members
-- Add blog posts
+Edit `src/data/portfolio.ts` to customize:
+- Company information
+- Services offered
+- Portfolio projects
+- Technology stack
+- Team members
+- Blog posts
 
 ### Styling
-- Tailwind CSS configuration: `tailwind.config.js`
+- Tailwind Config: `tailwind.config.js`
 - Global CSS: `src/assets/main.css`
-- Component styles are scoped using `<style scoped>`
+- Component styles: Scoped within `.vue` files
 
-### Colors
-The portfolio uses a professional color scheme:
-- **Primary**: Sky Blue (#0ea5e9)
-- **Accent**: Purple (#a855f7)
-- **Background**: Dark Slate
+### Fonts
+The entire site uses the **Outfit** font family from Google Fonts, ensuring consistent, modern typography throughout.
 
 ## Performance
 
-✅ **Production Build**: ~155KB minified  
-✅ **Gzip Size**: ~53KB  
-✅ **Fully Responsive**: Mobile, Tablet, Desktop  
-✅ **Smooth Animations**: GPU-accelerated transitions  
-✅ **SEO Friendly**: Semantic HTML structure  
+✅ **Production Build**: 147KB minified  
+✅ **Gzip Size**: 52KB  
+✅ **No Gradients**: Lighter CSS  
+✅ **Smooth Animations**: 60fps transitions  
+✅ **Mobile Optimized**: Touch-friendly interface  
+
+## Features Highlights
+
+### 1. **Light Theme Design**
+- Clean white backgrounds
+- Professional blue accents
+- Subtle shadows and borders
+- No visual clutter
+
+### 2. **Professional Typography**
+- Outfit font throughout
+- Clear hierarchy
+- Easy to read
+- Modern aesthetics
+
+### 3. **Smooth Interactions**
+- Hover effects
+- Animated cards
+- Smooth transitions
+- Floating elements
+
+### 4. **Mobile Responsive**
+- Mobile-first design
+- Touch-friendly buttons
+- Adaptive layouts
+- Fast load times
+
+### 5. **Developer Friendly**
+- Vue 3 Composition API
+- TypeScript support
+- Clean code structure
+- Easy to maintain
 
 ## Browser Support
 
@@ -118,10 +177,33 @@ The portfolio uses a professional color scheme:
 - Safari (latest)
 - Edge (latest)
 
+## Deployment Options
+
+### GitHub Pages
+```bash
+# Build and deploy to gh-pages
+```
+
+### Netlify
+- Connect GitHub repository
+- Auto-deploys on push
+- Auto SSL certificate
+
+### Vercel
+- Simple GitHub integration
+- Automatic deployments
+- CDN included
+
+### VPS/Server
+```bash
+# Copy dist/ to web server
+# Configure nginx/Apache
+```
+
 ## Development
 
 ### Hot Module Replacement
-The dev server supports HMR for instant component updates while developing.
+Fast refresh while developing - changes are instant.
 
 ### Type Checking
 ```bash
@@ -133,84 +215,45 @@ pnpm run type-check
 pnpm test:unit
 ```
 
-## Deployment
+## Build & Deploy
 
-### Build for Production
+### Development
+```bash
+pnpm dev
+```
+Visit http://localhost:5173
+
+### Production Build
 ```bash
 pnpm build
 ```
 
-The `dist` folder contains the production-ready build.
-
-### Deployment Options
-
-#### GitHub Pages
-```bash
-# Build and push dist to gh-pages branch
-```
-
-#### VPS/Server
-```bash
-# Copy dist folder to your web server
-# Configure nginx/Apache to serve index.html
-```
-
-#### Netlify
-Connect your GitHub repository and Netlify will auto-deploy on push.
-
-#### Vercel
-Similar to Netlify, auto-deploys from GitHub.
-
-## Features Highlights
-
-### 1. **Professional Design**
-- Modern gradient backgrounds
-- Smooth animations and transitions
-- Professional color scheme
-- Clean, maintainable code
-
-### 2. **Mobile Responsive**
-- Fully responsive design
-- Mobile-first approach
-- Touch-friendly interface
-- Fast loading times
-
-### 3. **SEO Optimized**
-- Semantic HTML
-- Proper heading hierarchy
-- Meta tags ready
-- Structured data ready
-
-### 4. **Performance**
-- Optimized bundle size
-- Code splitting
-- CSS minimization
-- Image optimization ready
-
-### 5. **Developer Experience**
-- Vue 3 Composition API
-- TypeScript support
-- Hot Module Replacement
-- Type checking
+The `dist/` folder contains the production-ready website.
 
 ## Future Enhancements
 
-- [ ] Dark/Light mode toggle
+- [ ] Dark mode toggle
 - [ ] Multi-language support
 - [ ] Blog post detail pages
-- [ ] CMS integration
+- [ ] CMS integration (Strapi, etc.)
 - [ ] Newsletter signup
-- [ ] Analytics integration
-- [ ] Performance optimizations
+- [ ] Analytics (Plausible, etc.)
+- [ ] SEO meta tags
+- [ ] Image optimization
+
+## Contact
+
+**Email**: hello@techxtrasol.com  
+**Lead Dev**: Norman Bii (biinorman1@gmail.com)  
+**Phone**: +1 (234) 567-890  
+**Location**: Silicon Valley, CA 94000
 
 ## License
 
 This project is created for TechXtraSol.
 
-## Support
-
-For questions or support, contact: hello@techxtrasol.com
-
 ---
 
 **Built with ❤️ for TechXtraSol** - Delivering Enterprise Excellence
+
+Made with Vue 3 • Tailwind CSS • Outfit Font • Clean Light Theme
