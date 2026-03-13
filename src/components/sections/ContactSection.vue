@@ -22,7 +22,9 @@
             :key="contact.title"
             class="bg-white border border-slate-200 rounded-2xl p-8 text-center space-y-4 hover:shadow-lg transition-all duration-300"
           >
-            <div class="text-3xl mx-auto">{{ contact.icon }}</div>
+            <div class="w-12 h-12 bg-blue-50 rounded-lg mx-auto flex items-center justify-center">
+              <svg v-html="getContactIcon(contact.icon)" class="w-6 h-6 text-blue-600"></svg>
+            </div>
             <div class="space-y-2">
               <h3 class="font-bold text-slate-900">{{ contact.title }}</h3>
               <p class="text-slate-600 text-sm">{{ contact.description }}</p>
@@ -143,29 +145,39 @@
 import { ref } from 'vue'
 import { companyData } from '../../data/portfolio'
 
+const contactIconSvgs: Record<string, string> = {
+  email: '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 8l9.5 6L21 8M3 8v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8m0 0L12 14m0 0L3 8"/></svg>',
+  location: '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z"/></svg>',
+  schedule: '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>',
+}
+
 const contactMethods = [
   {
-    icon: '📧',
+    icon: 'email',
     title: 'Email',
     description: 'Send us an email and we will respond within 24 hours',
     link: `mailto:${companyData.email}`,
     linkText: companyData.email,
   },
   {
-    icon: '📍',
+    icon: 'location',
     title: 'Location',
     description: 'We are based in Kenya',
     link: null,
     linkText: companyData.location,
   },
   {
-    icon: '🎯',
+    icon: 'schedule',
     title: 'Schedule',
     description: 'Book a meeting with us',
     link: companyData.calendarLink,
     linkText: 'Schedule Now',
   },
 ]
+
+const getContactIcon = (name: string): string => {
+  return contactIconSvgs[name] || '<svg fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>'
+}
 
 const form = ref({
   name: '',
