@@ -91,6 +91,7 @@ const navItems = [
   { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
   { label: 'Technologies', href: '#technologies' },
+  { label: 'Electronics', href: '#electronics' },
   { label: 'Team', href: '#team' },
   { label: 'Contact', href: '#contact' },
 ]

@@ -6,6 +6,7 @@ import ProjectsSection from './components/sections/ProjectsSection.vue'
 import TechnologiesSection from './components/sections/TechnologiesSection.vue'
 import AboutSection from './components/sections/AboutSection.vue'
 import BlogSection from './components/sections/BlogSection.vue'
+import ElectronicsSection from './components/sections/ElectronicsSection.vue'
 import ContactSection from './components/sections/ContactSection.vue'
 import Footer from './components/common/Footer.vue'
 </script>
@@ -20,6 +21,7 @@ import Footer from './components/common/Footer.vue'
       <TechnologiesSection />
       <AboutSection />
       <BlogSection />
+      <ElectronicsSection />
       <ContactSection />
     </main>
     <Footer />

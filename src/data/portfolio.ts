@@ -12,6 +12,10 @@ export const companyData = {
     linkedin: '',
     twitter: '',
   },
+  electronics: {
+    website: 'https://techxtrasol.tech',
+    whatsappCatalog: 'https://wa.me/c/254714000481',
+  },
 }
 
 export const services = [
@@ -358,5 +362,50 @@ export const blogPosts = [
     date: '2023-12-28',
     category: 'Security',
     readTime: 8,
+  },
+]
+
+export const electronics = [
+  {
+    id: 1,
+    category: 'Laptops',
+    name: 'Premium Ultrabooks',
+    description: 'High-performance ultrabooks for professionals',
+    specs: ['Intel/AMD Ryzen', 'SSD Storage', 'Long Battery Life'],
+  },
+  {
+    id: 2,
+    category: 'Laptops',
+    name: 'Gaming Laptops',
+    description: 'Powerful gaming laptops with dedicated graphics',
+    specs: ['RTX Graphics', 'High Refresh Rate', 'Cooling System'],
+  },
+  {
+    id: 3,
+    category: 'Laptops',
+    name: 'Business Laptops',
+    description: 'Reliable laptops for business and productivity',
+    specs: ['Business Grade', 'Security Features', 'Extended Support'],
+  },
+  {
+    id: 4,
+    category: 'Laptops',
+    name: 'Budget Laptops',
+    description: 'Affordable laptops for students and everyday use',
+    specs: ['Value for Money', 'Good Performance', 'Warranty Included'],
+  },
+  {
+    id: 5,
+    category: 'Laptops',
+    name: 'MacBooks',
+    description: 'Apple MacBook Pro and Air for creatives',
+    specs: ['Apple Silicon', 'Premium Build', 'Excellent Display'],
+  },
+  {
+    id: 6,
+    category: 'Laptops',
+    name: 'Workstation Laptops',
+    description: 'Professional workstations for designers and developers',
+    specs: ['Powerful CPU', 'Professional GPU', 'Large Display'],
   },
 ]
