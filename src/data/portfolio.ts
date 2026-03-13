@@ -88,6 +88,23 @@ export const services = [
   },
   {
     id: 6,
+    title: 'Payment Integration',
+    shortDesc: 'Multi-gateway payment solutions',
+    description:
+      'Complete payment processing solutions supporting Stripe, Polar, M-Pesa, PayPal, and cryptocurrency payments.',
+    icon: '💳',
+    technologies: ['Stripe API', 'PayPal SDK', 'M-Pesa', 'Crypto', 'Laravel'],
+    features: [
+      'Stripe & Polar integration',
+      'M-Pesa support',
+      'PayPal payments',
+      'Cryptocurrency (Bitcoin, Ethereum)',
+      'Secure PCI compliance',
+      'Webhook handling & reconciliation',
+    ],
+  },
+  {
+    id: 7,
     title: 'DevOps & Deployment',
     shortDesc: 'CI/CD pipelines and VPS management',
     description:
@@ -156,6 +173,16 @@ export const projects = [
   },
   {
     id: 6,
+    title: 'Multi-Gateway Payment Platform',
+    category: 'Payment Integration',
+    description:
+      'Integrated payment processing platform supporting Stripe, Polar, M-Pesa, PayPal, and cryptocurrency with real-time reconciliation.',
+    image: '💳',
+    technologies: ['Stripe API', 'PayPal SDK', 'M-Pesa', 'Crypto', 'Laravel', 'Vue.js'],
+    results: ['5 payment gateways', '99.99% uptime', 'Sub-second processing'],
+  },
+  {
+    id: 7,
     title: 'CI/CD & Deployment Infrastructure',
     category: 'DevOps',
     description:
@@ -236,6 +263,34 @@ export const technologies = [
     logo: '👥',
     description: 'Laravel role and permission package',
     proficiency: 'Expert',
+  },
+  {
+    name: 'Stripe',
+    category: 'Payment Gateway',
+    logo: '💳',
+    description: 'Payment processing for global transactions',
+    proficiency: 'Expert',
+  },
+  {
+    name: 'PayPal',
+    category: 'Payment Gateway',
+    logo: '💳',
+    description: 'Global payment and checkout solutions',
+    proficiency: 'Advanced',
+  },
+  {
+    name: 'M-Pesa',
+    category: 'Payment Gateway',
+    logo: '📱',
+    description: 'Mobile money integration for African markets',
+    proficiency: 'Advanced',
+  },
+  {
+    name: 'Cryptocurrency',
+    category: 'Payment Gateway',
+    logo: '₿',
+    description: 'Bitcoin, Ethereum, and blockchain payments',
+    proficiency: 'Advanced',
   },
 ]
 
