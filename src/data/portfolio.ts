@@ -1,0 +1,296 @@
+export const companyData = {
+  name: 'TechXtraSol',
+  tagline: 'Enterprise Solutions Built with Excellence',
+  description:
+    'We specialize in building robust, scalable solutions using modern technology stack including Laravel, Vue.js, and advanced DevOps practices.',
+  cta: 'Start Your Project',
+}
+
+export const services = [
+  {
+    id: 1,
+    title: 'POS Systems',
+    shortDesc: 'Modern point-of-sale solutions',
+    description:
+      'Enterprise-grade POS systems with real-time inventory management, multi-outlet support, and analytics dashboards.',
+    icon: '💳',
+    technologies: ['Laravel', 'Vue.js', 'MySQL', 'Redis'],
+    features: [
+      'Real-time inventory tracking',
+      'Multi-outlet management',
+      'Advanced reporting',
+      'Barcode integration',
+      'Payment gateway integration',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Hotel Management Systems',
+    shortDesc: 'Comprehensive hospitality solutions',
+    description:
+      'Complete hotel management platform including reservations, billing, housekeeping, and guest management.',
+    icon: '🏨',
+    technologies: ['Laravel API', 'Vue.js', 'PostgreSQL', 'Spatie Roles'],
+    features: [
+      'Reservation management',
+      'Guest profiles & history',
+      'Housekeeping workflow',
+      'Billing & invoicing',
+      'Multi-property support',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Financial Systems',
+    shortDesc: 'Secure financial management platform',
+    description:
+      'Robust financial management system with compliance, security, and advanced reporting capabilities.',
+    icon: '💰',
+    technologies: ['Laravel API', 'Vue.js', 'HashiCorp Vault', 'PostgreSQL', 'Spatie Roles'],
+    features: [
+      'Secure vault integration',
+      'Role-based access control',
+      'Audit trails',
+      'Advanced reporting',
+      'Compliance management',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Blog Platforms',
+    shortDesc: 'Content management systems',
+    description: 'Full-featured blog platforms with SEO optimization, content scheduling, and analytics.',
+    icon: '📝',
+    technologies: ['Laravel', 'Vue.js', 'Markdown', 'MySQL'],
+    features: [
+      'Content scheduling',
+      'SEO optimization',
+      'Comment management',
+      'Analytics dashboard',
+      'Multi-author support',
+    ],
+  },
+  {
+    id: 5,
+    title: 'Company Profile Pages',
+    shortDesc: 'Professional web presence',
+    description:
+      'Beautiful, responsive company profile websites with CMS integration and performance optimization.',
+    icon: '🌐',
+    technologies: ['Vue.js', 'Tailwind CSS', 'Responsive Design'],
+    features: [
+      'Responsive design',
+      'Fast loading',
+      'SEO friendly',
+      'CMS integration',
+      'Analytics tracking',
+    ],
+  },
+  {
+    id: 6,
+    title: 'DevOps & Deployment',
+    shortDesc: 'CI/CD pipelines and VPS management',
+    description:
+      'Complete deployment solutions with CI/CD pipelines, monitoring, and automated scaling on VPS infrastructure.',
+    icon: '🚀',
+    technologies: ['CI/CD', 'Docker', 'VPS', 'Linux', 'GitHub Actions'],
+    features: [
+      'Automated deployments',
+      'Continuous integration',
+      'Server monitoring',
+      'Auto scaling',
+      'Zero-downtime updates',
+    ],
+  },
+]
+
+export const projects = [
+  {
+    id: 1,
+    title: 'Multi-Outlet Retail POS',
+    category: 'POS System',
+    description:
+      'Comprehensive point-of-sale system for nationwide retail chain with 50+ outlets, real-time inventory sync, and advanced analytics.',
+    image: '📊',
+    technologies: ['Laravel', 'Vue.js', 'MySQL', 'Redis', 'Docker'],
+    results: ['50+ outlets connected', '99.9% uptime', 'Real-time sync'],
+  },
+  {
+    id: 2,
+    title: 'Luxury Hotel Management Suite',
+    category: 'Hotel Management',
+    description:
+      '5-star hotel management system handling 500+ rooms, reservations, billing, and guest services across multiple properties.',
+    image: '🏰',
+    technologies: ['Laravel API', 'Vue.js', 'PostgreSQL', 'Docker', 'CI/CD'],
+    results: ['500+ room capacity', '95% booking automation', 'Mobile check-in'],
+  },
+  {
+    id: 3,
+    title: 'Enterprise Financial Platform',
+    category: 'Financial System',
+    description:
+      'Secure financial management platform with vault integration, compliance tracking, and comprehensive audit trails.',
+    image: '💎',
+    technologies: ['Laravel', 'Vue.js', 'HashiCorp Vault', 'PostgreSQL', 'Spatie Roles'],
+    results: ['Military-grade security', 'Full compliance', '1M+ transactions'],
+  },
+  {
+    id: 4,
+    title: 'Tech Blog & Knowledge Base',
+    category: 'Blog Platform',
+    description:
+      'High-performance blog platform with 10K+ articles, advanced search, and community features.',
+    image: '📚',
+    technologies: ['Laravel', 'Vue.js', 'Elasticsearch', 'MySQL'],
+    results: ['10K+ articles', '100K+ monthly visitors', 'Sub-100ms load time'],
+  },
+  {
+    id: 5,
+    title: 'Corporate Web Presence',
+    category: 'Company Profile',
+    description: 'Modern, responsive company portfolio showcasing services, team, and case studies with CMS.',
+    image: '🎨',
+    technologies: ['Vue.js', 'Tailwind CSS', 'Vite', 'Responsive Design'],
+    results: ['Mobile-first design', 'Core Web Vitals Perfect', 'SEO A+ rating'],
+  },
+  {
+    id: 6,
+    title: 'CI/CD & Deployment Infrastructure',
+    category: 'DevOps',
+    description:
+      'Complete deployment pipeline with automated testing, building, and zero-downtime updates on VPS.',
+    image: '⚙️',
+    technologies: ['GitHub Actions', 'Docker', 'Nginx', 'Linux', 'Monitoring'],
+    results: ['1-click deployments', '< 5min update time', '99.95% uptime'],
+  },
+]
+
+export const technologies = [
+  {
+    name: 'Laravel',
+    category: 'Backend',
+    logo: '🔧',
+    description: 'Enterprise PHP framework for building scalable APIs and applications',
+    proficiency: 'Expert',
+  },
+  {
+    name: 'Vue.js',
+    category: 'Frontend',
+    logo: '⚡',
+    description: 'Progressive JavaScript framework for building interactive UIs',
+    proficiency: 'Expert',
+  },
+  {
+    name: 'PostgreSQL',
+    category: 'Database',
+    logo: '🗄️',
+    description: 'Advanced open-source relational database',
+    proficiency: 'Advanced',
+  },
+  {
+    name: 'MySQL',
+    category: 'Database',
+    logo: '🗄️',
+    description: 'Popular relational database management system',
+    proficiency: 'Advanced',
+  },
+  {
+    name: 'Redis',
+    category: 'Cache',
+    logo: '⚡',
+    description: 'High-performance in-memory data store',
+    proficiency: 'Advanced',
+  },
+  {
+    name: 'HashiCorp Vault',
+    category: 'Security',
+    logo: '🔐',
+    description: 'Secrets management and identity protection',
+    proficiency: 'Expert',
+  },
+  {
+    name: 'Docker',
+    category: 'DevOps',
+    logo: '📦',
+    description: 'Containerization platform for reliable deployments',
+    proficiency: 'Advanced',
+  },
+  {
+    name: 'CI/CD',
+    category: 'DevOps',
+    logo: '🚀',
+    description: 'GitHub Actions, automated testing and deployment pipelines',
+    proficiency: 'Expert',
+  },
+  {
+    name: 'Tailwind CSS',
+    category: 'Frontend',
+    logo: '🎨',
+    description: 'Utility-first CSS framework for rapid UI development',
+    proficiency: 'Expert',
+  },
+  {
+    name: 'Spatie Roles',
+    category: 'Authorization',
+    logo: '👥',
+    description: 'Laravel role and permission package',
+    proficiency: 'Expert',
+  },
+]
+
+export const teamMembers = [
+  {
+    name: 'Lead Developer',
+    role: 'Full Stack Engineer',
+    expertise: 'Laravel, Vue.js, DevOps',
+    bio: 'Passionate about building scalable enterprise solutions',
+  },
+  {
+    name: 'Backend Specialist',
+    role: 'Senior Laravel Developer',
+    expertise: 'APIs, Databases, Security',
+    bio: 'Expert in designing robust backend architectures',
+  },
+  {
+    name: 'Frontend Expert',
+    role: 'Vue.js Specialist',
+    expertise: 'UI/UX, Performance, Interactive Features',
+    bio: 'Creating beautiful and performant user experiences',
+  },
+]
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: 'Building Scalable Laravel APIs',
+    excerpt: 'Best practices for creating robust and efficient REST APIs with Laravel',
+    date: '2024-01-15',
+    category: 'Backend',
+    readTime: 5,
+  },
+  {
+    id: 2,
+    title: 'Vue.js Performance Optimization',
+    excerpt: 'Advanced techniques to optimize your Vue.js applications for production',
+    date: '2024-01-10',
+    category: 'Frontend',
+    readTime: 7,
+  },
+  {
+    id: 3,
+    title: 'Zero-Downtime Deployments',
+    excerpt: 'Implementing CI/CD pipelines with GitHub Actions for seamless updates',
+    date: '2024-01-05',
+    category: 'DevOps',
+    readTime: 6,
+  },
+  {
+    id: 4,
+    title: 'Security Best Practices with Vault',
+    excerpt: 'Protecting sensitive data using HashiCorp Vault in Laravel applications',
+    date: '2023-12-28',
+    category: 'Security',
+    readTime: 8,
+  },
+]
