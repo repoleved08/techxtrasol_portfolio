@@ -66,7 +66,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { RouterLink } from 'vue-router'
-import { services } from '../data/portfolio'
+import { services } from '../../data/portfolio'
 
 const route = useRoute()
 
